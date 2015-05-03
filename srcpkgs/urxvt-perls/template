@@ -1,17 +1,14 @@
 # Template file for 'urxvt-perls'
 pkgname=urxvt-perls
-version=20150502
+version=2.2
 revision=1
-hostmakedepends="git"
 depends="rxvt-unicode perl xsel"
 short_desc="Perl extensions for the rxvt-unicode terminal emulator"
 maintainer="nem <nem@posteo.net>"
 license="GPL-2"
+distfiles="https://github.com/muennich/urxvt-perls/archive/${version}.tar.gz"
+checksum="c184f9a188866fef333489323576e5d2808a1cbcdb5f69b9a0be5d5e1eff8b87"
 homepage="https://github.com/muennich/urxvt-perls"
-
-do_fetch() {
-	git clone git://github.com/muennich/urxvt-perls.git ${pkgname}-${version}
-}
 
 do_install() {
 	vlicense LICENSE
