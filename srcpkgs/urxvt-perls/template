@@ -9,11 +9,12 @@ license="GPL-2"
 distfiles="https://github.com/muennich/urxvt-perls/archive/${version}.tar.gz"
 checksum="c184f9a188866fef333489323576e5d2808a1cbcdb5f69b9a0be5d5e1eff8b87"
 homepage="https://github.com/muennich/urxvt-perls"
+noarch=yes
 
 do_install() {
 	vlicense LICENSE
 	vinstall clipboard 644 usr/lib/urxvt/perl
 	vinstall keyboard-select 644 usr/lib/urxvt/perl
 	vinstall url-select 644 usr/lib/urxvt/perl
-	vinstall README.md 644 usr/lib/urxvt/perl
+	vdoc README.md
 }
